@@ -1,0 +1,19 @@
+[package]
+name = "bebok-jev"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+license = "AGPL-3.0-or-later"
+repository = "https://github.com/henrykbrzoska/bebok-jev"
+description = "Jev smart permission auto-approver for Bebok: structured decision model (TypeSafe jev-1.13 via OpenRouter Decisions API) that auto-allows/denies tool calls before the user popup appears."
+
+[[bin]]
+name = "bebok-jev"
+path = "src/bin/bebok-jev.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1" }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+tracing = "0.1"

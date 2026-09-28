@@ -1,0 +1,10 @@
+{
+  "name": "bebok-jev",
+  "version": "0.1.0",
+  "min_engine_version": "1.9.0",
+  "description": "Jev smart permission auto-approver: structured decision model (TypeSafe jev-1.13 via OpenRouter Decisions API) that auto-allows/denies tool calls before the user popup appears.",
+  "entrypoint": "bebok-jev --plugin-server",
+  "entrypoint_windows": "bebok-jev.exe --plugin-server",
+  "entrypoint_unix": "sh -c \"if [ $(uname) = Darwin ]; then B=./bebok-jev-macos; else B=./bebok-jev; fi; chmod +x $B && exec $B --plugin-server\"",
+  "prompt_file": "AGENT_JEV.md"
+}
